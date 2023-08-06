@@ -137,3 +137,25 @@
 .ctaForm button:hover {
   background-color: #555;
 }
+
+.tagline {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  font-weight: 600;
+  color: #100f118b; /* Adjust this to whatever brand color you prefer */
+  display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.mission, .values {
+  margin: 2rem 0;
+  background-color: #f4f4f4; /* A light gray for contrast */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.values li {
+  margin-bottom: 1rem;
+}
