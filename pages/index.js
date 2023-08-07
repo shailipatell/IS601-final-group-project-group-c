@@ -8,6 +8,7 @@ export default function Home() {
       <Head>
         <title>TechFit Gym</title>
       </Head>
+
       <main className={styles.main}>
       <NavBar />
         {/* Tagline */}
@@ -44,6 +45,24 @@ export default function Home() {
             <li><strong>Innovation:</strong> Embrace cutting-edge technology to enhance the fitness experience.</li>
             <li><strong>Personalization:</strong> Tailor workout programs to meet individual needs and goals.</li>
             <li><strong>Excellence:</strong> Strive for the highest quality in equipment, training, and customer service.</li>
+          </ul>
+        </section>
+      
+        {/* Blog */}
+        <section className={utilStyles.headingMd}>
+        </section>
+        <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+          <h2 className={utilStyles.headingLg}>Blog</h2>
+          <ul className={utilStyles.list}>
+            {allPostsData.map(({ id, date, title }) => (
+              <li className={utilStyles.listItem} key={id}>
+              <Link href={`/posts/${id}`}>{title}</Link>
+              <br />
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
+            </li>
+            ))}
           </ul>
         </section>
       </main>
