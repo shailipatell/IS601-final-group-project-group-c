@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>TechnoGym - About</title>
+        <title>TechFit Gym - About</title>
         <meta name="description" content="Technologically focused gym business" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -15,14 +15,14 @@ export default function About() {
       <main className={styles.main}>
         <h1 className={styles.title}>About TechnoGym</h1>
         <p className={styles.description}>
-          TechnoGym is a technologically focused gym that combines the latest fitness trends with cutting-edge technology.
+          TechFit Gym is a technologically focused gym that combines the latest fitness trends with cutting-edge technology.
         </p>
         <p className={styles.description}>
           Our mission is to provide our members with the best fitness experience by leveraging the power of technology to
           enhance workouts, track progress, and offer personalized training programs.
         </p>
         <p className={styles.description}>
-          At TechnoGym, we believe that technology can revolutionize the fitness industry, and we are committed to
+          At TechFit Gym, we believe that technology can revolutionize the fitness industry, and we are committed to
           integrating innovative solutions into every aspect of our gym.
         </p>
       </main>
