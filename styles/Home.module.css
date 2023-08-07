@@ -89,3 +89,73 @@
     flex-direction: column;
   }
 }
+
+/* Existing styles... */
+
+/* Add the below new styles */
+
+.hero {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.hero h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.ctaForm {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ctaForm input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  width: 250px;
+}
+
+.ctaForm button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.ctaForm button:hover {
+  background-color: #555;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  font-weight: 600;
+  color: #100f118b; /* Adjust this to whatever brand color you prefer */
+  display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.mission, .values {
+  margin: 2rem 0;
+  background-color: #f4f4f4; /* A light gray for contrast */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.values li {
+  margin-bottom: 1rem;
+}
