@@ -12,6 +12,7 @@ export default function NavBar() {
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
                 <a href="#contact">Contact</a>
+                <a href="#blog">Blog</a>
             </div>
         </nav>
     );
