@@ -1,7 +1,8 @@
 // pages/privacy.js
 
 import Head from 'next/head';
-import styles from '../styles/Privacy.module.css';
+import styles from '../styles/Home.module.css';
+import NavBar from '../components/NavBar'
 
 export default function PrivacyPolicy() {
   return (

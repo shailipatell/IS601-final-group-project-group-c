@@ -1,7 +1,8 @@
 // pages/about.js
 
 import Head from 'next/head';
-import styles from '../styles/About.module.css';
+import styles from '../styles/Home.module.css';
+import NavBar from '../components/NavBar'
 
 export default function About() {
   return (
@@ -13,7 +14,7 @@ export default function About() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>About TechnoGym</h1>
+        <h1 className={styles.title}>About TechFit Gym</h1>
         <p className={styles.description}>
           TechFit Gym is a technologically focused gym that combines the latest fitness trends with cutting-edge technology.
         </p>
@@ -28,7 +29,7 @@ export default function About() {
       </main>
 
       <footer className={styles.footer}>
-        <p>&copy; {new Date().getFullYear()} TechnoGym. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} TechFit Gym. All rights reserved.</p>
       </footer>
     </div>
   );
