@@ -1,11 +1,12 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from './layout.module.css'
-import utilStyles from '../styles/utils.module.css'
-import Link from 'next/link'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from './layout.module.css';
+import utilStyles from '../styles/utils.module.css';
 
-const name = 'Gym Tek Business'
-export const siteTitle = 'Next.js Sample Website'
+import Link from 'next/link';
+
+const name = 'Radhika';
+export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
   return (
@@ -19,8 +20,8 @@ export default function Layout({ children, home }) {
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+            siteTitle,
+          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -28,14 +29,14 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            {/* <Image
+            <Image
               priority
-              src="/images/profile.jpg"
+              src="/../public/images/jessica.png"
               className={utilStyles.borderCircle}
               height={144}
               width={144}
-              alt={name}
-            /> */}
+              alt=""
+            />
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
@@ -43,11 +44,11 @@ export default function Layout({ children, home }) {
             <Link href="/">
               <Image
                 priority
-                src="/images/profile.jpg"
+                src="/../public/images/jessica.png"
                 className={utilStyles.borderCircle}
                 height={108}
                 width={108}
-                alt={name}
+                alt=""
               />
             </Link>
             <h2 className={utilStyles.headingLg}>
@@ -65,5 +66,5 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
-  )
+  );
 }
