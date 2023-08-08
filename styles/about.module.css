@@ -1,0 +1,35 @@
+/* About Page Styling */
+.main {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #888;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}

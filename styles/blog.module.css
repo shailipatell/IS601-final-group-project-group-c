@@ -1,0 +1,57 @@
+/* Home Page Styling */
+.headingMd {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.headingLg {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.padding1px {
+    padding-top: 1px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.listItem {
+    margin: 0 0 20px;
+}
+
+.listItem a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.listItem a:hover {
+    color: #FFA500;
+}
+
+.lightText {
+    color: #777;
+}
+
+.footer {
+    margin-top: 60px;
+    text-align: center;
+    color: #777;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .headingLg {
+        font-size: 2rem;
+    }
+
+    .headingMd {
+        font-size: 1.3rem;
+    }
+}

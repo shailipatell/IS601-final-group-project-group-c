@@ -12,7 +12,6 @@ export default function NavBar() {
                 <a href="home">Home</a>
                 <a href="about">About</a>
                 <a href="privacy">Privacy Policy</a>
-                <a href="contact">Contact</a>
                 <a href="blog">Blog</a>
             </div>
         </nav>
