@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
-  await new Promise(resolve => setTimeout(resolve, 220000)); // Wait for 2 seconds
+  await new Promise(resolve => setTimeout(resolve, 20000)); // Wait for 2 seconds
   await page.goto('http://localhost:3001/');
   await page.getByRole('link', { name: 'Home' }).click();
   await page.getByPlaceholder('Enter your email to get started').click();
