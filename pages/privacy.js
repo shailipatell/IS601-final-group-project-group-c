@@ -4,10 +4,13 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import NavBar from '../components/NavBar'
 
+
+
 export default function PrivacyPolicy() {
   return (
     <div className={styles.container}>
       <Head>
+      <NavBar />
         <title>TechnoGym - Privacy Policy</title>
         <meta name="description" content="TechnoGym - Privacy Policy" />
         <link rel="icon" href="/favicon.ico" />

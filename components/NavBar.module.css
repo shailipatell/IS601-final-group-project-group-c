@@ -5,30 +5,36 @@
     position: sticky;
     top: 0;
     transition: background 0.3s;
-    background: #FFF; 
+    background: #f8f9fa; /* Light gray background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    z-index: 100; /* Ensure it's above other content */
 }
 
 .navbar.scrolled {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8); /* Slightly darker background when scrolled */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
 }
 
 .brand {
     font-weight: bold;
-    color: #000; 
+    color: #333; /* Darker text color */
+    font-size: 1.5rem; /* Larger font size */
+    text-transform: uppercase; /* Uppercase text */
 }
 
 .menu a {
     margin: 0 15px;
     text-decoration: none;
-    color: #000; 
+    color: #444; /* Slightly darker text color */
+    font-weight: 500; /* Slightly bolder font */
     transition: color 0.3s;
 }
 
 .menu a:hover {
-    color: #FFA500; 
+    color: #ff6b00; /* Brighter orange color on hover */
 }
 
 .navbar.scrolled .brand, 
 .navbar.scrolled .menu a {
-    color: #FFF;
+    color: #fff; /* White text color when scrolled */
 }

@@ -1,18 +1,19 @@
 // pages/about.js
-
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import NavBar from '../components/NavBar'
+import NavBar from '../components/NavBar'; // Import the NavBar component
 
 export default function About() {
   return (
     <div className={styles.container}>
       <Head>
+      <NavBar />
         <title>TechFit Gym - About</title>
         <meta name="description" content="Technologically focused gym business" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+     
       <main className={styles.main}>
         <h1 className={styles.title}>About TechFit Gym</h1>
         <p className={styles.description}>

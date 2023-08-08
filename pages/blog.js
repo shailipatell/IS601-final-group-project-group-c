@@ -4,6 +4,8 @@ import Head from 'next/head';
 import Layout, {siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
+import NavBar from '../components/NavBar'; // Import the NavBar component
+
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -18,6 +20,7 @@ export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
+      <NavBar />
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
