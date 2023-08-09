@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
     <div className={styles.container}>
       <Head>
       <NavBar />
-        <title>TechnoGym - Privacy Policy</title>
+        <title>TechFit Gym - Privacy Policy</title>
         <meta name="description" content="TechnoGym - Privacy Policy" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
       <main className={styles.main}>
         <h1 className={styles.title}>Privacy Policy</h1>
         <p className={styles.content}>
-          At TechnoGym, we take your privacy seriously. This Privacy Policy outlines how we collect, use, and share your
+          At TechFit Gym, we take your privacy seriously. This Privacy Policy outlines how we collect, use, and share your
           personal information when you visit our website or use our services.
         </p>
         <p className={styles.content}>
@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
       </main>
 
       <footer className={styles.footer}>
-        <p>&copy; {new Date().getFullYear()} TechnoGym. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} TechnFit Gym. All rights reserved.</p>
       </footer>
     </div>
   );
