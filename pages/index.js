@@ -4,61 +4,16 @@ import styles from '../styles/Home.module.css';
 import NavBar from '../components/NavBar';
 
 export default function Home() {
-  
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [hasUserGivenConsent, setHasUserGivenConsent] = useState(false);
-  const [ga4Loaded, setGa4Loaded] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
-
-  useEffect(() => {
-    // Load the user's consent from local storage.
-    const userConsent = localStorage.getItem('userGAConsent');
-    if (userConsent === 'true') {
-      setHasUserGivenConsent(true);
-    }
-
-    // Check if the Google Analytics script has loaded.
-    const ga4Script = document.querySelector(`script[src*="${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}"]`);
-    if (ga4Script) {
-      ga4Script.onload = () => {
-        setGa4Loaded(true);
-      };
-    }
-
-    return () => {
-      if (ga4Script) {
-        ga4Script.onload = null;
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (hasUserGivenConsent && ga4Loaded) {
-      logPageView();
-    }
-  }, [hasUserGivenConsent, ga4Loaded]);
-
-  const handleConsent = () => {
-    localStorage.setItem('userGAConsent', 'true');
-    setHasUserGivenConsent(true);
-  };
-
-  const handleOptOut = () => {
-    localStorage.setItem('userGAConsent', 'false');
-    setHasUserGivenConsent(false);
-  };
 
   const subscribe = async (e) => {
     e.preventDefault();
 
     const response = await fetch('/api/subscribe', {
-      body: JSON.stringify({
-        email
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      body: JSON.stringify({ email }),
+      headers: { 'Content-Type': 'application/json' },
       method: 'POST',
     });
 
@@ -103,7 +58,11 @@ export default function Home() {
 
       <main className={styles.main}>
         <NavBar />
+
+        {/* Tagline */}
         <p className={styles.tagline}>Unlock Your Fitness Potential with Data-Driven Workouts</p>
+
+        {/* Hero Section */}
         <section className={styles.hero}>
           <h2>Join the Best Gym in Town!</h2>
           <p>Start your journey with us and achieve your fitness goals.</p>
@@ -113,31 +72,41 @@ export default function Home() {
               <input 
                 type="email" 
                 placeholder="Enter your email to get started" 
-                required 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                required 
               />
               <div>
-                <input type="checkbox" required />
-                <label>
-                  I consent to receive marketing emails and agree with the 
-                  <a href="/privacy"> Privacy Policy</a>.
-                </label>
+                  <input type="checkbox" required />
+                  <label>
+                    I consent to receive marketing emails and agree with the 
+                    <a href="/path-to-your-privacy-policy">Privacy Policy</a>.
+                  </label>
               </div>
               <button type="submit">Join Now</button>
             </form>
           ) : (
-            <div>
-              <p className={styles.message}>{message}</p>
-              <button onClick={unsubscribe}>Unsubscribe</button>
-            </div>
+            <form className={styles.ctaForm} onSubmit={unsubscribe}>
+              <input 
+                type="email" 
+                placeholder="Enter your email to unsubscribe" 
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required 
+              />
+              <button type="submit">Unsubscribe</button>
+            </form>
           )}
-
+          {message && <p>{message}</p>}
         </section>
+
+        {/* Brand Mission */}
         <section className={styles.mission}>
           <h2>Our Mission</h2>
           <p>Empowering individuals to achieve their fitness goals through a data-driven and personalized approach, leveraging advanced technology and expert guidance.</p>
         </section>
+
+        {/* Brand Core Values */}
         <section className={styles.values}>
           <h2>Our Core Values</h2>
           <ul>
