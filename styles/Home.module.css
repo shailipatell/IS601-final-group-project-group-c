@@ -159,3 +159,34 @@ align-items: center;
 .values li {
   margin-bottom: 1rem;
 }
+
+.ctaForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ctaForm div {
+  display: flex;
+  align-items: center;
+  gap: 0rem; 
+}
+
+.ctaForm input[type="checkbox"] {
+  margin: 0;
+}
+
+.ctaForm label {
+  font-size: 0.9rem;
+}
+
+
+.ctaForm a {
+  color: #0070f3; /* Styling for the privacy policy link. Adjust if necessary */
+  text-decoration: none;
+}
+
+.ctaForm a:hover {
+  text-decoration: underline; /* Adding an underline on hover for better UX */
+}
