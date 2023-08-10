@@ -8,8 +8,8 @@ export default async function handler(req, res) {
     }
 
     try {
-        const LIST_ID = process.env.NEXT_PUBLIC_MAILCHIMP_AUDIENCE_ID; // Replace with your Mailchimp list ID
-        const API_KEY = process.env.NEXT_PUBLIC_MAILCHIMP_API_KEY; // Replace with your Mailchimp API key
+        const LIST_ID = process.env.MAILCHIMP_AUDIENCE_ID; // Replace with your Mailchimp list ID
+        const API_KEY = process.env.MAILCHIMP_API_KEY; // Replace with your Mailchimp API key
         const DATACENTER = API_KEY.split('-')[1];
 
         const response = await fetch(
