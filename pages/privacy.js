@@ -6,7 +6,7 @@ import NavBar from '../components/NavBar'
 
 
 
-export default function PrivacyPolicy() {
+export default function Privacy() {
   return (
     <div className={styles.container}>
       <Head>
