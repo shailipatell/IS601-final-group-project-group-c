@@ -3,7 +3,7 @@ import Head from 'next/head';
 import styles from '../styles/about.module.css';
 import NavBar from '../components/NavBar'; // Import the NavBar component
 
-export default function Home() {
+export default function About() {
   return (
     <div className={styles.container}>
       <Head>
